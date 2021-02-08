@@ -25,9 +25,9 @@ while True:
 cars = [{key: value for key, value in zip((head.strip() for head in header), (c.strip() for c in car))}
         for car in car_details]
 
-slow_cars = [slow for slow in cars if int(slow['hp(horse power)']) < 120]
-fast_cars = [fast for fast in cars if 120 <= int(fast['hp(horse power)']) < 180]
-sport_cars = [sport for sport in cars if int(sport['hp(horse power)']) >= 180]
+slow_cars = [slow for slow in cars if int(slow['hp']) < 120]
+fast_cars = [fast for fast in cars if 120 <= int(fast['hp']) < 180]
+sport_cars = [sport for sport in cars if int(sport['hp']) >= 180]
 
 with open('slow_cars.json', 'w') as json_slow_cars, \
         open('fast_cars.json', 'w') as json_fast_cars, \
@@ -60,4 +60,18 @@ with open('cheap_cars.json', 'w') as json_cheap_cars, \
     expensive_cars_file = json.dumps(expensive_cars)
     json_expensive_cars.write(expensive_cars_file)
 
-
+# unique_car_list = set()
+# for unique in cars:
+#     unique_car_list.add(unique['brand'])
+#
+# for each_car in cars:
+#     if each_car['brand'] in unique_car_list:
+#         json_file = '{}.json'.format(each_car['brand'])
+#         with open(json_file, 'a') as json_each:
+#             json_each.write(json.dumps(each_car))
+#         print('append')
+#     else:
+#         json_file = '{}.json'.format(each_car['brand'])
+#         with open(json_file, 'w') as json_each:
+#             json_each.write(json.dumps(each_car))
+#         print('write')

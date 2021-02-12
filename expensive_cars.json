@@ -1,0 +1,14 @@
+[
+  {
+    "brand": "audi",
+    "model": "q7",
+    "hp": "200",
+    "price": "6000"
+  },
+  {
+    "brand": "volkswagen",
+    "model": "beetle",
+    "hp": "99",
+    "price": "5000"
+  }
+]

@@ -66,10 +66,10 @@ for unique in cars:
     car_list_set.add(unique['brand'])
 
 for unique_value in car_list_set:
-    empty_list = []
+    unique_value_list = []
     for each_car in cars:
         if each_car['brand'] == unique_value:
-            empty_list.append(each_car)
+            unique_value_list.append(each_car)
     json_file = '{}.json'.format(unique_value)
     with open(json_file, 'a') as json_each:
-        json_each.write(json.dumps(empty_list))
+        json_each.write(json.dumps(unique_value_list))

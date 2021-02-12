@@ -1,1 +1,26 @@
-[{"brand": "dacia", "model": "logan", "hp": "70", "price": "500"}, {"brand": "toyota", "model": "yaris", "hp": "90", "price": "900"}, {"brand": "opel", "model": "corsa", "hp": "70", "price": "700"}, {"brand": "volkswagen", "model": "beetle", "hp": "99", "price": "5000"}]
+[
+  {
+    "brand": "dacia",
+    "model": "logan",
+    "hp": "70",
+    "price": "500"
+  },
+  {
+    "brand": "toyota",
+    "model": "yaris",
+    "hp": "90",
+    "price": "900"
+  },
+  {
+    "brand": "opel",
+    "model": "corsa",
+    "hp": "70",
+    "price": "700"
+  },
+  {
+    "brand": "volkswagen",
+    "model": "beetle",
+    "hp": "99",
+    "price": "5000"
+  }
+]

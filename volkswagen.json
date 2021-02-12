@@ -1,9 +1,9 @@
 [
   {
-    "brand": "audi",
-    "model": "q7",
-    "hp": "200",
-    "price": "6000"
+    "brand": "volkswagen",
+    "model": "passat",
+    "hp": "120",
+    "price": "2000"
   },
   {
     "brand": "volkswagen",

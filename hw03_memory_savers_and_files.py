@@ -60,16 +60,9 @@ with open('cheap_cars.json', 'w') as json_cheap_cars, \
     expensive_cars_file = json.dumps(expensive_cars)
     json_expensive_cars.write(expensive_cars_file)
 
-
-car_list_set = set()
-for unique in cars:
-    car_list_set.add(unique['brand'])
+car_list_set = set(set_value['brand'] for set_value in cars)
 
 for unique_value in car_list_set:
-    unique_value_list = []
-    for each_car in cars:
-        if each_car['brand'] == unique_value:
-            unique_value_list.append(each_car)
-    json_file = '{}.json'.format(unique_value)
-    with open(json_file, 'a') as json_each:
+    unique_value_list = [each_car for each_car in cars if each_car['brand'] == unique_value]
+    with open(f'{unique_value}.json', 'a') as json_each:
         json_each.write(json.dumps(unique_value_list))

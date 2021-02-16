@@ -18,7 +18,7 @@ another_sum_of_integers = integer_sum(2, 4, 'abc', param_1=2)
 print('Sum of only the integer arguments: ', another_sum_of_integers)
 
 
-# 2
+# 2.1
 
 even_num_list = []
 odd_num_list = []
@@ -47,6 +47,31 @@ for odd_num in odd_num_list:
     odd_num_sum += odd_num
 
 print(f'\nSum of all numbers between 0 and the function argument: {sum_get}')
+print(f'Sum of even numbers between 0 and the function argument: {even_num_sum}')
+print(f'Sum of odd numbers between 0 and the function argument: {odd_num_sum}')
+
+
+# 2.2
+
+
+def get_sum(num):
+    if num == 0:
+        return 0, 0, 0
+
+    total_sum, even_sum, odd_sum = get_sum(num - 1)
+
+    total_sum += num
+
+    if num % 2 == 0:
+        even_sum += num
+    else:
+        odd_sum += num
+
+    return total_sum, even_sum, odd_sum
+
+
+total_num_sum, even_num_sum, odd_num_sum = get_sum(8)
+print(f'\nSum of all numbers between 0 and the function argument: {total_num_sum}')
 print(f'Sum of even numbers between 0 and the function argument: {even_num_sum}')
 print(f'Sum of odd numbers between 0 and the function argument: {odd_num_sum}')
 
